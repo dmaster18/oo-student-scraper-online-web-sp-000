@@ -3,9 +3,11 @@ class Student ##student class
   attr_accessor :name, :location, :twitter, :linkedin, :github, :blog, :profile_quote, :bio, :profile_url 
 
   @@all = []
-
+  
   def initialize(student_hash)
-    
+    @name = student_hash[0]  
+    @location = student_hash[1]  
+    @profile_url = student_hash[2]
   end
 
   def self.create_from_collection(students_array)
@@ -17,7 +19,6 @@ class Student ##student class
   end
 
   def self.all
-    
+    @@all
   end
 end
-
