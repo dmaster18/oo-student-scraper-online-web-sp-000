@@ -22,6 +22,7 @@ class Scraper
         :profile_quote=> student.css(".profile-quote").children.text, :bio=> student.css('.description-holder').children.text
       }
     }
+    created_student[0]
   end
 
 end
