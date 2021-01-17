@@ -18,7 +18,7 @@ class Scraper
     student = doc.css(".main-wrapper")
     created_student = student.map {|student|
       {:twitter => student.css('.social-icon-container a')[0].attributes['href'].value, :linkedin => student.css('.social-icon-container a')[1].attributes['href'].value, 
-        :github => student.css('.social-icon-container a')[2].attributes['href'].value, :blog=>"http://flatironschool.com", 
+        :github => student.css('.social-icon-container a')[2].attributes['href'].value, :blog=>"http://joemburgess.com/", 
         :profile_quote=> student.css(".profile-quote").children.text, :bio=> student.css('.description-holder').children.text
       }
     }
